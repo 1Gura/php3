@@ -1,15 +1,24 @@
 <?php
+//В задании со звёздочкой попытался реализовать свзяь 1 к 1
 if (!empty($_POST)) {
     $success = false;
     $error = false;
     if (!empty($_POST['submit'])) {
-        if ($_POST['login'] == $login && $_POST['password'] == $password) {
-            $success = true;
-        } else {
+        $key = 0;
+        foreach ($logins as $login) {
+            if ($login['login'] === $_POST['login']) {
+                $key = $login['idPassword'];
+            }
+        }
+        foreach ($passwords as $password) {
+            if ($password['password'] === $_POST['password'] && $password['id'] === $key) {
+                $success = true;
+            }
+        }
+        if ($success === false) {
             $error = true;
         }
     }
-
 }
 ?>
 <?php

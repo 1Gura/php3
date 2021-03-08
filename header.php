@@ -1,7 +1,6 @@
 <?php
 include $_SERVER['DOCUMENT_ROOT'] . '/block.php';
 include $_SERVER['DOCUMENT_ROOT'] . '/include/success.php';
-
 ?>
 <!DOCTYPE html>
 <html>

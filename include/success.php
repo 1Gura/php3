@@ -1,5 +1,5 @@
 <?php
-function makeSuccess($success, $error)
+function makeSuccess($success = false, $error = false)
 {
     if ($success === true && $error === false) { ?>
     <p class="success">

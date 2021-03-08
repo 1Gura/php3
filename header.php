@@ -1,7 +1,8 @@
 <?php
 include $_SERVER['DOCUMENT_ROOT'] . './block.php';
 include $_SERVER['DOCUMENT_ROOT'] . './include/success.php';
-
+include $_SERVER['DOCUMENT_ROOT'] . './logins.php';
+include $_SERVER['DOCUMENT_ROOT'] . './passwords.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -34,8 +35,6 @@ include $_SERVER['DOCUMENT_ROOT'] . './include/success.php';
 
             <h1>Возможности проекта —</h1>
             <p>Вести свои личные списки, например покупки в магазине, цели, задачи и многое другое. Делится списками с друзьями и просматривать списки друзей.</p>
-
-
         </td>
         <td class="right-collum-index">
             <div class="project-folders-menu">

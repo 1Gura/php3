@@ -1,7 +1,7 @@
 <?php
+$success = false;
+$error = false;
 if (!empty($_POST)) {
-    $success = false;
-    $error = false;
     if (!empty($_POST['submit'])) {
         if ($_POST['login'] == $login && $_POST['password'] == $password) {
             $success = true;

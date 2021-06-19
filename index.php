@@ -1,14 +1,4 @@
 <?php
-    include __DIR__ . '/header.php';
-?>
-
-<?php
-    if(!empty($_GET)) {
-        if($_GET['login'] === "yes") {
-            include __DIR__ . '/registration-form.php';
-        }
-    }
-?>
-<?php
-include __DIR__ . '/footer.php';
-?>
+include_once $_SERVER['DOCUMENT_ROOT'] . './templates/header.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . './route/main-block.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/templates/footer.php';

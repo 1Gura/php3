@@ -206,3 +206,15 @@ p.error {
     font-weight: bold;
     border-radius: 10px;
 }
+
+.fz12 {
+    font-size: 12px;
+}
+
+.fz16 {
+    font-size: 16px;
+}
+
+.selected {
+    text-decoration: underline;
+}

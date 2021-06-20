@@ -1,7 +1,7 @@
 <?php
 $mainMenu = [
     [
-        'title' => 'Главная',
+        'title' => 'Главное меню текст для точек',
         'path' => '/',
         'sort' => 5
     ],
@@ -53,10 +53,11 @@ function renderMenu($menu, $position = 'header')
     $fz = $position === 'footer' ? 'fz12' : 'fz16';
     echo "<ul class='main-menu $style $fz'>";
     foreach ($menu as &$item) {
+        $title = cutString($item['title']);
         if ($item['path'] === $_SERVER['REQUEST_URI']) {
-            echo "<li class='selected'><a href = '{$item['path']}'>{$item['title']}</a></li>";
+            echo "<li class='selected'><a href = '{$item['path']}'>{$title}</a></li>";
         } else {
-            echo "<li><a href = '{$item['path']}'>{$item['title']}</a></li>";
+            echo "<li><a href = '{$item['path']}'>{$title}</a></li>";
         }
     }
     echo "</ul>";
@@ -71,4 +72,20 @@ function showMenu($position, &$menu)
         arraySort($menu, 'title', SORT_DESC);
         renderMenu($menu, $position);
     }
+}
+
+function getTitle($menu) {
+    foreach ($menu as &$item) {
+        if ($item['path'] === $_SERVER['REQUEST_URI']) {
+            echo "<h1>{$item['title']}</h1>";
+            break;
+        }
+    }
+}
+
+function cutString($line, $length = 12, $appends = '...'): string {
+    if(iconv_strlen($line) > 15) {
+        return mb_substr($line, 0, $length) . $appends;
+    }
+    return $line;
 }

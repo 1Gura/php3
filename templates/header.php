@@ -19,10 +19,6 @@ include $_SERVER['DOCUMENT_ROOT'] . './passwords.php';
     <div class="logo"><img src="../i/logo.png"  width="68" height="23" alt="Project"></div>
     <div class="clearfix"></div>
 </div>
-<?php
-//stripos();
-var_dump($_SERVER["REQUEST_URI"]);
-?>
 <div class="clear">
     <?=showMenu('header', $mainMenu)?>
 </div>
